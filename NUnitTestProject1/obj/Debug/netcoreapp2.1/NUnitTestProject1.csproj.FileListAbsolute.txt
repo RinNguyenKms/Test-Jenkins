@@ -10,3 +10,6 @@ E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProj
 E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProject1.csproj.CoreCompileInputs.cache
 E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProject1.AssemblyInfoInputs.cache
 E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProject1.AssemblyInfo.cs
+E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\bin\Debug\netcoreapp2.1\NUnitTestProject1.pdb
+E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProject1.dll
+E:\AAAAAAAA\Test-Jenkins\NUnitTestProject1\obj\Debug\netcoreapp2.1\NUnitTestProject1.pdb
