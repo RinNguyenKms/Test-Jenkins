@@ -58,8 +58,56 @@
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}",
+      "!app/**/*.test.{js,jsx}",
+      "!app/*/RbGenerated*/*.{js,jsx}",
+      "!app/app.js",
+      "!app/global-styles.js",
+      "!app/*/*/Loadable.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 70,
+        "branches": 70,
+        "functions": 70,
+        "lines": 70
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "app"
+    ],
+    "moduleNameMapper": {
+      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js",
+      "appConfig": "<rootDir>/app/config/test.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/internals/testing/enzyme-setup.js",
+      "jest-localstorage-mock"
+    ],
+    "testRegex": "tests/.*\\.test\\.js$",
+    "verbose": false,
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "test-reporter.xml",
+    "indent": 4,
+    "env": {
+      "test": {
+        "reportPath": "reports-test"
+      }
+    }
+  },
   "dependencies": {
     "@babel/polyfill": "7.0.0",
+    "babel-polyfill": "^6.26.0",
+    "jasmine-reporters": "^2.0.0",
     "chalk": "2.4.1",
     "compression": "1.7.3",
     "connected-react-router": "4.5.0",
@@ -76,6 +124,7 @@
     "loadable-components": "2.2.3",
     "lodash": "4.17.11",
     "minimist": "1.2.0",
+    "mocha": "^6.1.4",
     "pngquant-bin": "^3.1.1",
     "prop-types": "15.6.2",
     "react": "16.6.0",
@@ -138,6 +187,8 @@
     "imports-loader": "0.8.0",
     "jest-cli": "23.6.0",
     "jest-styled-components": "6.2.2",
+    "jest-localstorage-mock": "^2.2.0",
+    "jest-sonar-reporter": "2.0.0",
     "lint-staged": "7.3.0",
     "ngrok": "3.1.0",
     "node-plop": "0.16.0",
